@@ -10,12 +10,20 @@ typedef int (*hash_function)(char*);
 typedef struct HashMap{
     size_t capacity;
     hash_function hasher;
-    int* table;
+    char* table;
 } HashMap;
 
-// functions
+// helper functions
 int primitive_hash(char* key);
+
+// Hashmap methods
 HashMap make_default_hashmap();
+
+void hm_init_with(HashMap* hm, char c);
+void hm_print_all(HashMap* hm);
+
+
+
 
 
 #endif
