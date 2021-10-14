@@ -7,15 +7,15 @@
 // type definitions
 typedef int (*hash_function)(char*);
 
-typedef struct HashTable{
+typedef struct HashMap{
     size_t capacity;
     hash_function hasher;
     int* table;
-} HashTable;
+} HashMap;
 
 // functions
 int primitive_hash(char* key);
-HashTable make_default_hashmap();
+HashMap make_default_hashmap();
 
 
 #endif
